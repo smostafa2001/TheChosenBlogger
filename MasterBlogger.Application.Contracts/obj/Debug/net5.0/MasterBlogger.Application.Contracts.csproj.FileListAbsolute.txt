@@ -1,0 +1,12 @@
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\bin\Debug\net5.0\MasterBlogger.Application.Contracts.deps.json
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\bin\Debug\net5.0\MasterBlogger.Application.Contracts.dll
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\bin\Debug\net5.0\MasterBlogger.Application.Contracts.pdb
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\MasterBlogger.Application.Contracts.csproj.AssemblyReference.cache
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\MasterBlogger.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\MasterBlogger.Application.Contracts.AssemblyInfoInputs.cache
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\MasterBlogger.Application.Contracts.AssemblyInfo.cs
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\MasterBlogger.Application.Contracts.csproj.CoreCompileInputs.cache
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\MasterBlogger.Application.Contracts.dll
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\refint\MasterBlogger.Application.Contracts.dll
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\MasterBlogger.Application.Contracts.pdb
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Application.Contracts\obj\Debug\net5.0\ref\MasterBlogger.Application.Contracts.dll
