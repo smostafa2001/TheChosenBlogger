@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
+using System;
 
 namespace MasterBlogger.Domain.ArticleCategoryAggregate
 {
@@ -9,9 +10,10 @@ namespace MasterBlogger.Domain.ArticleCategoryAggregate
         public bool IsDeleted { get; private set; }
         public DateTime CreationDate { get; private set; }
 
-        public ArticleCategory(string title)
+        public ArticleCategory(string title, IArticleCategoryValidatorService validatorService)
         {
             ValidateArticleCategory(title);
+            validatorService.CheckRecordExists(title);
             Title = title;
             IsDeleted = false;
             CreationDate = DateTime.Now;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MasterBlogger.Domain.ArticleCategoryAggregate.Exceptions;
+using System;
 
 namespace MasterBlogger.Domain.ArticleCategoryAggregate.Services
 {
@@ -9,7 +10,7 @@ namespace MasterBlogger.Domain.ArticleCategoryAggregate.Services
         {
             if (_articleCategoryRepository.DoesExist(title))
             {
-                throw new Exception();
+                throw new DuplicatedRecordException("This record already exists in the database!");
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using MasterBlogger.Application.Contracts.ArticleCategory;
 using MasterBlogger.Domain.ArticleCategoryAggregate;
+using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -10,6 +11,7 @@ namespace MasterBlogger.Application
     public class ArticleCategoryApplication : IArticleCategoryApplication
     {
         private readonly IArticleCategoryRepository _articleCategoryRepository;
+        private readonly IArticleCategoryValidatorService _articleCategoryValidatorService;
         public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository)
         {
             _articleCategoryRepository = articleCategoryRepository;
@@ -17,7 +19,7 @@ namespace MasterBlogger.Application
 
         public void Add(CreateArticleCategory command)
         {
-            var articleCategory = new ArticleCategory(command.Title);
+            var articleCategory = new ArticleCategory(command.Title, _articleCategoryValidatorService);
             _articleCategoryRepository.Add(articleCategory);
         }
 
