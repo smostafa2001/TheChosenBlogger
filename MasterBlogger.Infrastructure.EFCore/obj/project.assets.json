@@ -1764,6 +1764,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "MasterBlogger.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MasterBlogger.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MasterBlogger.Application.Contracts.dll": {}
+        }
+      },
       "MasterBlogger.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6004,6 +6014,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "MasterBlogger.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../MasterBlogger.Application.Contracts/MasterBlogger.Application.Contracts.csproj",
+      "msbuildProject": "../MasterBlogger.Application.Contracts/MasterBlogger.Application.Contracts.csproj"
+    },
     "MasterBlogger.Domain/1.0.0": {
       "type": "project",
       "path": "../MasterBlogger.Domain/MasterBlogger.Domain.csproj",
@@ -6012,6 +6027,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "MasterBlogger.Application.Contracts >= 1.0.0",
       "MasterBlogger.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
@@ -6053,6 +6069,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\Mostafa\\ASP.NETCoreExercises\\Atriya\\MasterBlogger\\MasterBlogger.Application.Contracts\\MasterBlogger.Application.Contracts.csproj": {
+              "projectPath": "D:\\Mostafa\\ASP.NETCoreExercises\\Atriya\\MasterBlogger\\MasterBlogger.Application.Contracts\\MasterBlogger.Application.Contracts.csproj"
+            },
             "D:\\Mostafa\\ASP.NETCoreExercises\\Atriya\\MasterBlogger\\MasterBlogger.Domain\\MasterBlogger.Domain.csproj": {
               "projectPath": "D:\\Mostafa\\ASP.NETCoreExercises\\Atriya\\MasterBlogger\\MasterBlogger.Domain\\MasterBlogger.Domain.csproj"
             }

@@ -1,5 +1,8 @@
-﻿using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
+﻿using MasterBlogger.Domain.ArticleAggregate;
+using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace MasterBlogger.Domain.ArticleCategoryAggregate
 {
@@ -9,6 +12,7 @@ namespace MasterBlogger.Domain.ArticleCategoryAggregate
         public string Title { get; private set; }
         public bool IsDeleted { get; private set; }
         public DateTime CreationDate { get; private set; }
+        public ICollection<Article> Articles { get; set; }
 
         public ArticleCategory(string title, IArticleCategoryValidatorService validatorService)
         {
@@ -17,6 +21,7 @@ namespace MasterBlogger.Domain.ArticleCategoryAggregate
             Title = title;
             IsDeleted = false;
             CreationDate = DateTime.Now;
+            Articles = new List<Article>();
         }
 
         public void ValidateArticleCategory(string title)

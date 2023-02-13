@@ -293,6 +293,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\Mostafa\\ASP.NETCoreExercises\\Atriya\\MasterBlogger\\MasterBlogger.Application.Contracts\\MasterBlogger.Application.Contracts.csproj": {
+                "projectPath": "D:\\Mostafa\\ASP.NETCoreExercises\\Atriya\\MasterBlogger\\MasterBlogger.Application.Contracts\\MasterBlogger.Application.Contracts.csproj"
+              },
               "D:\\Mostafa\\ASP.NETCoreExercises\\Atriya\\MasterBlogger\\MasterBlogger.Domain\\MasterBlogger.Domain.csproj": {
                 "projectPath": "D:\\Mostafa\\ASP.NETCoreExercises\\Atriya\\MasterBlogger\\MasterBlogger.Domain\\MasterBlogger.Domain.csproj"
               }

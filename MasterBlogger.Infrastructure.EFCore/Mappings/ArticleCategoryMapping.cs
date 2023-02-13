@@ -18,6 +18,7 @@ namespace MasterBlogger.Infrastructure.EFCore.Mappings
             builder.Property(x => x.Title);
             builder.Property(x => x.CreationDate);
             builder.Property(x => x.IsDeleted);
+            builder.HasMany(x=>x.Articles).WithOne(x=>x.ArticleCategory).HasForeignKey(x=>x.ArticleCategoryId);
             
         }
     }

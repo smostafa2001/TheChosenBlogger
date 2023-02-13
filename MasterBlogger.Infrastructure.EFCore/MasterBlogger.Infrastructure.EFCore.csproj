@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MasterBlogger.Application.Contracts\MasterBlogger.Application.Contracts.csproj" />
     <ProjectReference Include="..\MasterBlogger.Domain\MasterBlogger.Domain.csproj" />
   </ItemGroup>
 
