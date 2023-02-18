@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "MasterBlogger.Domain/1.0.0": {
+        "dependencies": {
+          "MasterBlogger.Application.Contracts": "1.0.0"
+        },
         "runtime": {
           "MasterBlogger.Domain.dll": {}
+        }
+      },
+      "MasterBlogger.Application.Contracts/1.0.0": {
+        "runtime": {
+          "MasterBlogger.Application.Contracts.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MasterBlogger.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MasterBlogger.Application.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

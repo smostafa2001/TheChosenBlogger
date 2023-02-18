@@ -16,3 +16,5 @@ D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Infrastructur
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Infrastructure.EFCore\obj\Debug\net5.0\MasterBlogger.Infrastructure.EFCore.pdb
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Infrastructure.EFCore\obj\Debug\net5.0\MasterBlogger.Infrastructure.EFCore.genruntimeconfig.cache
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Infrastructure.EFCore\obj\Debug\net5.0\ref\MasterBlogger.Infrastructure.EFCore.dll
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Infrastructure.EFCore\bin\Debug\net5.0\MasterBlogger.Application.Contracts.dll
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Infrastructure.EFCore\bin\Debug\net5.0\MasterBlogger.Application.Contracts.pdb

@@ -401,3 +401,4 @@ D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Presentation.
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Presentation.RazorPages\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\_ViewStart.cshtml.g.cs
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Presentation.RazorPages\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Create.cshtml.g.cs
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Presentation.RazorPages\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Edit.cshtml.g.cs
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Presentation.RazorPages\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleManagement\List.cshtml.g.cs

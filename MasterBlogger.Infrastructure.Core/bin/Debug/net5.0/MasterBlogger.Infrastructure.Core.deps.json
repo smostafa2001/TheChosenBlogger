@@ -1049,12 +1049,16 @@
         }
       },
       "MasterBlogger.Domain/1.0.0": {
+        "dependencies": {
+          "MasterBlogger.Application.Contracts": "1.0.0"
+        },
         "runtime": {
           "MasterBlogger.Domain.dll": {}
         }
       },
       "MasterBlogger.Infrastructure.EFCore/1.0.0": {
         "dependencies": {
+          "MasterBlogger.Application.Contracts": "1.0.0",
           "MasterBlogger.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"

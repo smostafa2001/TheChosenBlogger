@@ -1777,6 +1777,9 @@
       "MasterBlogger.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "MasterBlogger.Application.Contracts": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/MasterBlogger.Domain.dll": {}
         },

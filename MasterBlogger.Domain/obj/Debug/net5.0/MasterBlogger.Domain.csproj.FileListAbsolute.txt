@@ -10,3 +10,6 @@ D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Domain\obj\De
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Domain\obj\Debug\net5.0\refint\MasterBlogger.Domain.dll
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Domain\obj\Debug\net5.0\MasterBlogger.Domain.pdb
 D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Domain\obj\Debug\net5.0\ref\MasterBlogger.Domain.dll
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Domain\bin\Debug\net5.0\MasterBlogger.Application.Contracts.dll
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Domain\bin\Debug\net5.0\MasterBlogger.Application.Contracts.pdb
+D:\Mostafa\ASP.NETCoreExercises\Atriya\MasterBlogger\MasterBlogger.Domain\obj\Debug\net5.0\MasterBlogger.Domain.csproj.CopyComplete
