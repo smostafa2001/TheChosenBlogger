@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MasterBlogger.Application\MasterBlogger.Application.csproj" />
     <ProjectReference Include="..\MasterBlogger.Infrastructure.EFCore\MasterBlogger.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\MasterBlogger.Infrastructure.Query\MasterBlogger.Infrastructure.Query.csproj" />
   </ItemGroup>
 
 </Project>

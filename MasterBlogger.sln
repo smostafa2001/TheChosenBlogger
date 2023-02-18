@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterBlogger.Presentation.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterBlogger.Infrastructure.Core", "MasterBlogger.Infrastructure.Core\MasterBlogger.Infrastructure.Core.csproj", "{30931DB6-8BB9-418E-8F28-842E34401DE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterBlogger.Infrastructure.Query", "MasterBlogger.Infrastructure.Query\MasterBlogger.Infrastructure.Query.csproj", "{ECEC52B7-5A83-48EA-89B8-882B08F0C60E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{30931DB6-8BB9-418E-8F28-842E34401DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30931DB6-8BB9-418E-8F28-842E34401DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30931DB6-8BB9-418E-8F28-842E34401DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECEC52B7-5A83-48EA-89B8-882B08F0C60E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEC52B7-5A83-48EA-89B8-882B08F0C60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEC52B7-5A83-48EA-89B8-882B08F0C60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEC52B7-5A83-48EA-89B8-882B08F0C60E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

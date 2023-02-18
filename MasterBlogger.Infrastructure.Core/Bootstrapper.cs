@@ -7,6 +7,7 @@ using MasterBlogger.Domain.ArticleCategoryAggregate;
 using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
 using MasterBlogger.Infrastructure.EFCore;
 using MasterBlogger.Infrastructure.EFCore.Repositories;
+using MasterBlogger.Infrastructure.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -23,6 +24,7 @@ namespace MasterBlogger.Infrastructure.Core
             services.AddTransient<IArticleApplication, ArticleApplication>();
             services.AddTransient<IArticleRepository, ArticleRepository>();
             services.AddTransient<IArticleValidatorService, ArticleValidatorService>();
+            services.AddTransient<IArticleQuery, ArticleQuery>();
             services.AddDbContext<MasterBloggerContext>(options => options.UseSqlServer(connectionString));
         }
     }
