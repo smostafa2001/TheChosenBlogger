@@ -19,8 +19,10 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
         public void CreateAndSave(Article entity)
         {
             _context.Articles.Add(entity);
-            _context.SaveChanges();
+            Save();
         }
+
+        public Article Get(long id) => _context.Articles.FirstOrDefault(x => x.Id == id);
 
         public List<ArticleViewModel> GetList() => _context.Articles.Include(x => x.ArticleCategory).Select(x => new ArticleViewModel
         {
@@ -30,5 +32,7 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
             IsDeleted = x.IsDeleted,
             CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture)
         }).ToList();
+
+        public void Save() => _context.SaveChanges();
     }
 }
