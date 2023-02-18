@@ -9,5 +9,6 @@ namespace MasterBlogger.Domain.ArticleAggregate
         void CreateAndSave(Article entity);
         Article Get(long id);
         void Save();
+        bool DoesExist(string title);
     }
 }

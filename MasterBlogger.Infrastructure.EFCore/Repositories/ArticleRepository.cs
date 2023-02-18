@@ -22,6 +22,8 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
             Save();
         }
 
+        public bool DoesExist(string title) => _context.Articles.Any(a => a.Title == title);
+
         public Article Get(long id) => _context.Articles.FirstOrDefault(x => x.Id == id);
 
         public List<ArticleViewModel> GetList() => _context.Articles.Include(x => x.ArticleCategory).Select(x => new ArticleViewModel
