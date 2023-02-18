@@ -15,9 +15,16 @@ namespace MasterBlogger.Presentation.RazorPages.Areas.Administrator.Pages.Articl
             _articleApplication = articleApplication;
         }
 
-        public void OnGet()
+        public void OnGet() => Articles = _articleApplication.GetList();
+        public RedirectToPageResult OnPostRemove(long id)
         {
-            Articles = _articleApplication.GetList();
+            _articleApplication.Remove(id);
+            return RedirectToPage("./List");
+        }
+        public RedirectToPageResult OnPostActivate(long id)
+        {
+            _articleApplication.Activate(id);
+            return RedirectToPage("./List");
         }
     }
 }

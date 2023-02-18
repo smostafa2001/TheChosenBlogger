@@ -12,9 +12,10 @@ namespace MasterBlogger.Application
     {
         private readonly IArticleCategoryRepository _articleCategoryRepository;
         private readonly IArticleCategoryValidatorService _articleCategoryValidatorService;
-        public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository)
+        public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository, IArticleCategoryValidatorService articleCategoryValidatorService)
         {
             _articleCategoryRepository = articleCategoryRepository;
+            _articleCategoryValidatorService = articleCategoryValidatorService;
         }
 
         public void Add(CreateArticleCategory command)

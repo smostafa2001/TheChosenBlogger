@@ -6,6 +6,12 @@ namespace MasterBlogger.Domain.ArticleCategoryAggregate.Services
     public class ArticleCategoryValidatorService : IArticleCategoryValidatorService
     {
         private readonly IArticleCategoryRepository _articleCategoryRepository;
+
+        public ArticleCategoryValidatorService(IArticleCategoryRepository articleCategoryRepository)
+        {
+            _articleCategoryRepository = articleCategoryRepository;
+        }
+
         public void CheckRecordExists(string title)
         {
             if (_articleCategoryRepository.DoesExist(title))
