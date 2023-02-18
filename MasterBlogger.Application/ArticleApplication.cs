@@ -14,6 +14,12 @@ namespace MasterBlogger.Application
             _articleRepository = articleRepository;
         }
 
+        public void Create(CreateArticle command)
+        {
+            var article = new Article(command.Title, command.ShortDescription, command.Image, command.Content, command.ArticleCategoryId);
+            _articleRepository.CreateAndSave(article);
+        }
+
         public List<ArticleViewModel> GetList() => _articleRepository.GetList();
     }
 }

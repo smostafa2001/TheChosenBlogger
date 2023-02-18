@@ -6,5 +6,6 @@ namespace MasterBlogger.Domain.ArticleAggregate
     public interface IArticleRepository
     {
         List<ArticleViewModel> GetList();
+        void CreateAndSave(Article entity);
     }
 }
