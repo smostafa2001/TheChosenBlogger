@@ -1,10 +1,6 @@
 ﻿using MasterBlogger.Application.Contracts.Comment;
 using MasterBlogger.Domain.CommentAggregate;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MasterBlogger.Application
 {

@@ -1,5 +1,4 @@
 ﻿using MasterBlogger.Domain.ArticleCategoryAggregate.Exceptions;
-using System;
 
 namespace MasterBlogger.Domain.ArticleCategoryAggregate.Services
 {

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using MasterBlogger.Infrastructure.Query;
+﻿using MasterBlogger.Infrastructure.Query;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
 
 namespace MB.Presentation.MVCCore.Pages
 {

@@ -12,7 +12,6 @@ using MasterBlogger.Infrastructure.EFCore.Repositories;
 using MasterBlogger.Infrastructure.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace MasterBlogger.Infrastructure.Core
 {

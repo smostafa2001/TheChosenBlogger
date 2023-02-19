@@ -8,7 +8,7 @@ namespace MasterBlogger.Domain.ArticleCategoryAggregate.Exceptions
         {
 
         }
-        public DuplicatedRecordException(string message):base(message)
+        public DuplicatedRecordException(string message) : base(message)
         {
 
         }

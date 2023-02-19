@@ -19,10 +19,10 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
             Save();
         }
 
-        public bool DoesExist(string title) => _context.ArticleCategories.Any(ac=>ac.Title == title);
+        public bool DoesExist(string title) => _context.ArticleCategories.Any(ac => ac.Title == title);
 
         public ArticleCategory Get(long id) => _context.ArticleCategories.FirstOrDefault(x => x.Id == id);
-        public List<ArticleCategory> GetAll() => _context.ArticleCategories.OrderByDescending(x=>x.Id).ToList();
+        public List<ArticleCategory> GetAll() => _context.ArticleCategories.OrderByDescending(x => x.Id).ToList();
 
         public void Save() => _context.SaveChanges();
     }

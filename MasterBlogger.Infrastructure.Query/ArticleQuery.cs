@@ -1,4 +1,5 @@
-﻿using MasterBlogger.Infrastructure.EFCore;
+﻿using MasterBlogger.Domain.CommentAggregate;
+using MasterBlogger.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Globalization;
@@ -14,7 +15,22 @@ namespace MasterBlogger.Infrastructure.Query
             _context = context;
         }
 
-        public ArticleQueryView GetArticle(long id) => _context.Articles.Include(x => x.ArticleCategory).Select(x => new ArticleQueryView
+        public ArticleQueryView GetArticle(long id) => _context.Articles.Include(x => x.ArticleCategory)
+            .Include(x => x.Comments)
+            .Select(x => new ArticleQueryView
+            {
+                Id = x.Id,
+                Title = x.Title,
+                ArticleCategory = x.ArticleCategory.Title,
+                CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture),
+                ShortDescription = x.ShortDescription,
+                Image = x.Image,
+                Content = x.Content,
+                CountOfCommnets = x.Comments.Count(z => z.Status == Statuses.CONFIRMED),
+                Comments = MapComments(x.Comments.Where(z => z.Status == Statuses.CONFIRMED))
+            }).FirstOrDefault(x => x.Id == id);
+
+        public List<ArticleQueryView> GetArticles() => _context.Articles.Include(x => x.ArticleCategory).Include(x => x.Comments).Select(x => new ArticleQueryView
         {
             Id = x.Id,
             Title = x.Title,
@@ -22,17 +38,14 @@ namespace MasterBlogger.Infrastructure.Query
             CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture),
             ShortDescription = x.ShortDescription,
             Image = x.Image,
-            Content = x.Content
-        }).FirstOrDefault(x => x.Id == id);
+            CountOfCommnets = x.Comments.Count(z => z.Status == Statuses.CONFIRMED),
+        }).ToList();
 
-        public List<ArticleQueryView> GetArticles() => _context.Articles.Include(x => x.ArticleCategory).Select(x => new ArticleQueryView
+        private static List<CommentQueryView> MapComments(IEnumerable<Comment> comments) => comments.Select(comment => new CommentQueryView
         {
-            Id = x.Id,
-            Title = x.Title,
-            ArticleCategory = x.ArticleCategory.Title,
-            CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture),
-            ShortDescription = x.ShortDescription,
-            Image = x.Image
+            Name = comment.Name,
+            CreationDate = comment.CreationDate.ToString(CultureInfo.InvariantCulture),
+            Message = comment.Message
         }).ToList();
     }
 }

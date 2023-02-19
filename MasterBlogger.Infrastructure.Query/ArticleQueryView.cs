@@ -1,4 +1,6 @@
-﻿namespace MasterBlogger.Infrastructure.Query
+﻿using System.Collections.Generic;
+
+namespace MasterBlogger.Infrastructure.Query
 {
     public class ArticleQueryView
     {
@@ -9,5 +11,7 @@
         public string CreationDate { get; set; }
         public string Image { get; set; }
         public string Content { get; set; }
+        public int CountOfCommnets { get; set; }
+        public List<CommentQueryView> Comments { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using MasterBlogger.Domain.ArticleAggregate;
 using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace MasterBlogger.Domain.ArticleCategoryAggregate

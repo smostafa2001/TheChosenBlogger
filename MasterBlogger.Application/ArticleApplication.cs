@@ -1,6 +1,5 @@
 ﻿using MasterBlogger.Application.Contracts.Article;
 using MasterBlogger.Domain.ArticleAggregate;
-using System;
 using System.Collections.Generic;
 
 namespace MasterBlogger.Application

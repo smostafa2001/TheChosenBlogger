@@ -1,7 +1,6 @@
 ﻿using MasterBlogger.Application.Contracts.ArticleCategory;
 using MasterBlogger.Domain.ArticleCategoryAggregate;
 using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
-using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
