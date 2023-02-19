@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterBlogger.Presentation.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterBlogger.Infrastructure.Core", "MasterBlogger.Infrastructure.Core\MasterBlogger.Infrastructure.Core.csproj", "{30931DB6-8BB9-418E-8F28-842E34401DE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterBlogger.Infrastructure.Query", "MasterBlogger.Infrastructure.Query\MasterBlogger.Infrastructure.Query.csproj", "{ECEC52B7-5A83-48EA-89B8-882B08F0C60E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterBlogger.Infrastructure.Query", "MasterBlogger.Infrastructure.Query\MasterBlogger.Infrastructure.Query.csproj", "{ECEC52B7-5A83-48EA-89B8-882B08F0C60E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

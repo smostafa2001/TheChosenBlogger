@@ -22,5 +22,7 @@ namespace MasterBlogger.Application
             var comment = new Comment(command.Name, command.Email, command.Message, command.ArticleId);
             _commentRepository.CreateAndSave(comment);
         }
+
+        public List<CommentViewModel> GetList() => _commentRepository.GetList();
     }
 }
