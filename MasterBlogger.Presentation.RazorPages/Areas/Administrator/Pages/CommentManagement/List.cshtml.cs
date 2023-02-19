@@ -1,4 +1,5 @@
 using MasterBlogger.Application.Contracts.Comment;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 
@@ -17,6 +18,18 @@ namespace MasterBlogger.Presentation.RazorPages.Areas.Administrator.Pages.Commen
         public void OnGet()
         {
             Comments = _commentApplication.GetList();
+        }
+
+        public RedirectToPageResult OnPostConfirm(long id)
+        {
+            _commentApplication.Confirm(id);
+            return RedirectToPage("./List");
+        }
+
+        public RedirectToPageResult OnPostCancel(long id)
+        {
+            _commentApplication.Cancel(id);
+            return RedirectToPage("./List");
         }
     }
 }

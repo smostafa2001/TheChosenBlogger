@@ -11,5 +11,7 @@ namespace MasterBlogger.Domain.CommentAggregate
     {
         void CreateAndSave(Comment entity);
         List<CommentViewModel> GetList();
+        Comment Get(long id);
+        void Save();
     }
 }

@@ -13,7 +13,7 @@ namespace MasterBlogger.Domain.CommentAggregate
         public string Name { get; private set; }
         public string Email { get; private set; }
         public string Message { get; private set; }
-        public byte Status { get; private set; } //New = 0, Confirmed = 1, Canceled = 2
+        public byte Status { get; private set; }
         public DateTime CreationDate { get; private set; }
         public long ArticleId { get; private set; }
         public Article Article { get; private set; }
@@ -32,5 +32,8 @@ namespace MasterBlogger.Domain.CommentAggregate
             CreationDate = DateTime.Now;
             Status = Statuses.NEW;
         }
+
+        public void Confirm() => Status = Statuses.CONFIRMED;
+        public void Cancel() => Status = Statuses.CANCELED;
     }
 }

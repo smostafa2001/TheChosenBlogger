@@ -21,9 +21,10 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
         public void CreateAndSave(Comment entity)
         {
             _context.Comments.Add(entity);
-            _context.SaveChanges();
+            Save();
         }
 
+        public Comment Get(long id) => _context.Comments.FirstOrDefault(x => x.Id == id);
         public List<CommentViewModel> GetList() => _context.Comments.Include(x => x.Article).Select(x => new CommentViewModel
         {
             Id = x.Id,
@@ -34,5 +35,7 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
             CreationDate = x.CreationDate.ToString(),
             Article = x.Article.Title
         }).ToList();
+
+        public void Save() => _context.SaveChanges();
     }
 }
