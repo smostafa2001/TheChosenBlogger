@@ -1,19 +1,18 @@
-﻿using MasterBlogger.Domain.ArticleCategoryAggregate;
+﻿using _01.Framework.Domain;
+using MasterBlogger.Domain.ArticleCategoryAggregate;
 using MasterBlogger.Domain.CommentAggregate;
 using System;
 using System.Collections.Generic;
 
 namespace MasterBlogger.Domain.ArticleAggregate
 {
-    public class Article
+    public class Article : DomainBase<long>
     {
-        public long Id { get; private set; }
         public string Title { get; private set; }
         public string ShortDescription { get; private set; }
         public string Image { get; private set; }
         public string Content { get; private set; }
         public bool IsDeleted { get; private set; }
-        public DateTime CreationDate { get; private set; }
         public long ArticleCategoryId { get; private set; }
         public ArticleCategory ArticleCategory { get; private set; }
         public ICollection<Comment> Comments { get; private set; }
@@ -31,7 +30,6 @@ namespace MasterBlogger.Domain.ArticleAggregate
             Content = content;
             ArticleCategoryId = articleCategoryId;
             IsDeleted = false;
-            CreationDate = DateTime.Now;
             Comments = new List<Comment>();
         }
 

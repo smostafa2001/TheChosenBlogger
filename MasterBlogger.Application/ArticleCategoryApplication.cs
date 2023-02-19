@@ -20,14 +20,14 @@ namespace MasterBlogger.Application
         public void Add(CreateArticleCategory command)
         {
             var articleCategory = new ArticleCategory(command.Title, _articleCategoryValidatorService);
-            _articleCategoryRepository.Add(articleCategory);
+            _articleCategoryRepository.Create(articleCategory);
         }
 
         public void Rename(RenameArticleCategory command)
         {
             var articleCategory = _articleCategoryRepository.Get(command.Id);
             articleCategory.Rename(command.Title);
-            _articleCategoryRepository.Save();
+            //_articleCategoryRepository.Save();
         }
 
         public RenameArticleCategory Get(long id)
@@ -43,14 +43,14 @@ namespace MasterBlogger.Application
         {
             var articleCategory = _articleCategoryRepository.Get(id);
             articleCategory.Remove();
-            _articleCategoryRepository.Save();
+            //_articleCategoryRepository.Save();
         }
 
         public void Activate(long id)
         {
             var articleCategory = _articleCategoryRepository.Get(id);
             articleCategory.Activate();
-            _articleCategoryRepository.Save();
+            //_articleCategoryRepository.Save();
         }
 
         public List<ArticleCategoryViewModel> List() => _articleCategoryRepository.GetAll()
@@ -60,7 +60,7 @@ namespace MasterBlogger.Application
                 Title = ac.Title,
                 IsDeleted = ac.IsDeleted,
                 CreationDate = ac.CreationDate.ToString(CultureInfo.InvariantCulture)
-            }).ToList();
+            }).OrderByDescending(x=>x.Id).ToList();
 
     }
 }

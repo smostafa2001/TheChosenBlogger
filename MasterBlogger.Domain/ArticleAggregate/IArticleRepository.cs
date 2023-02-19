@@ -1,14 +1,11 @@
-﻿using MasterBlogger.Application.Contracts.Article;
+﻿using _01.Framework.Infrastructure;
+using MasterBlogger.Application.Contracts.Article;
 using System.Collections.Generic;
 
 namespace MasterBlogger.Domain.ArticleAggregate
 {
-    public interface IArticleRepository
+    public interface IArticleRepository : IRepository<long, Article>
     {
-        List<ArticleViewModel> GetList();
-        void CreateAndSave(Article entity);
-        Article Get(long id);
-        void Save();
-        bool DoesExist(string title);
+        public List<ArticleViewModel> GetList();
     }
 }

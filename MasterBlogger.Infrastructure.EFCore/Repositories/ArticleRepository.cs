@@ -1,4 +1,5 @@
-﻿using MasterBlogger.Application.Contracts.Article;
+﻿using _01.Framework.Infrastructure;
+using MasterBlogger.Application.Contracts.Article;
 using MasterBlogger.Domain.ArticleAggregate;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -7,24 +8,14 @@ using System.Linq;
 
 namespace MasterBlogger.Infrastructure.EFCore.Repositories
 {
-    public class ArticleRepository : IArticleRepository
+    public class ArticleRepository : BaseRepository<long, Article>, IArticleRepository
     {
         private readonly MasterBloggerContext _context;
-
-        public ArticleRepository(MasterBloggerContext context)
+        public ArticleRepository(MasterBloggerContext context) : base(context)
         {
             _context = context;
         }
-
-        public void CreateAndSave(Article entity)
-        {
-            _context.Articles.Add(entity);
-            Save();
-        }
-
         public bool DoesExist(string title) => _context.Articles.Any(a => a.Title == title);
-
-        public Article Get(long id) => _context.Articles.FirstOrDefault(x => x.Id == id);
 
         public List<ArticleViewModel> GetList() => _context.Articles.Include(x => x.ArticleCategory).Select(x => new ArticleViewModel
         {
@@ -34,7 +25,5 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
             IsDeleted = x.IsDeleted,
             CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture)
         }).ToList();
-
-        public void Save() => _context.SaveChanges();
     }
 }

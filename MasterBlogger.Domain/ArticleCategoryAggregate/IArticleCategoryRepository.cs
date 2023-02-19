@@ -1,14 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using _01.Framework.Infrastructure;
+using System.Collections.Generic;
 
 namespace MasterBlogger.Domain.ArticleCategoryAggregate
 {
-    public interface IArticleCategoryRepository
+    public interface IArticleCategoryRepository : IRepository<long, ArticleCategory>
     {
-        List<ArticleCategory> GetAll();
-        ArticleCategory Get(long id);
-        void Add(ArticleCategory entity);
-        void Save();
-        bool DoesExist(string title);
-
     }
 }

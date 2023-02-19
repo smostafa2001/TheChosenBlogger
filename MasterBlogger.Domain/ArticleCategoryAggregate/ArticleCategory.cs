@@ -1,16 +1,15 @@
-﻿using MasterBlogger.Domain.ArticleAggregate;
+﻿using _01.Framework.Domain;
+using MasterBlogger.Domain.ArticleAggregate;
 using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
 using System;
 using System.Collections.Generic;
 
 namespace MasterBlogger.Domain.ArticleCategoryAggregate
 {
-    public class ArticleCategory
+    public class ArticleCategory : DomainBase<long>
     {
-        public long Id { get; private set; }
         public string Title { get; private set; }
         public bool IsDeleted { get; private set; }
-        public DateTime CreationDate { get; private set; }
         public ICollection<Article> Articles { get; set; }
 
         protected ArticleCategory()
@@ -23,7 +22,6 @@ namespace MasterBlogger.Domain.ArticleCategoryAggregate
             validatorService.CheckRecordExists(title);
             Title = title;
             IsDeleted = false;
-            CreationDate = DateTime.Now;
             Articles = new List<Article>();
         }
 

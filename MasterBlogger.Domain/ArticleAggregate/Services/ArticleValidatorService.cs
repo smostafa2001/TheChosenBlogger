@@ -13,7 +13,7 @@ namespace MasterBlogger.Domain.ArticleAggregate.Services
 
         public void CheckRecordExists(string title)
         {
-            if (_articleRepository.DoesExist(title))
+            if (_articleRepository.DoesExist(x=>x.Title == title))
             {
                 throw new DuplicatedRecordException();
             }

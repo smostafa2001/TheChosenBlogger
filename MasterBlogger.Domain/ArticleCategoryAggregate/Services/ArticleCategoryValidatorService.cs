@@ -13,7 +13,7 @@ namespace MasterBlogger.Domain.ArticleCategoryAggregate.Services
 
         public void CheckRecordExists(string title)
         {
-            if (_articleCategoryRepository.DoesExist(title))
+            if (_articleCategoryRepository.DoesExist(x => x.Title == title))
             {
                 throw new DuplicatedRecordException("This record already exists in the database!");
             }
