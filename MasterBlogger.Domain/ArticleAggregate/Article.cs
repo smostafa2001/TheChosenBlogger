@@ -1,5 +1,8 @@
 ﻿using MasterBlogger.Domain.ArticleCategoryAggregate;
+using MasterBlogger.Domain.CommentAggregate;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace MasterBlogger.Domain.ArticleAggregate
 {
@@ -14,6 +17,7 @@ namespace MasterBlogger.Domain.ArticleAggregate
         public DateTime CreationDate { get; private set; }
         public long ArticleCategoryId { get; private set; }
         public ArticleCategory ArticleCategory { get; private set; }
+        public ICollection<Comment> Comments { get; private set; }
         protected Article()
         {
 
@@ -29,6 +33,7 @@ namespace MasterBlogger.Domain.ArticleAggregate
             ArticleCategoryId = articleCategoryId;
             IsDeleted = false;
             CreationDate = DateTime.Now;
+            Comments = new List<Comment>();
         }
 
         private static void Validate(string title, long articleCategoryId)
