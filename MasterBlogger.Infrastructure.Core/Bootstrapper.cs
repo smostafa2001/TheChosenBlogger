@@ -1,10 +1,12 @@
 ﻿using MasterBlogger.Application;
 using MasterBlogger.Application.Contracts.Article;
 using MasterBlogger.Application.Contracts.ArticleCategory;
+using MasterBlogger.Application.Contracts.Comment;
 using MasterBlogger.Domain.ArticleAggregate;
 using MasterBlogger.Domain.ArticleAggregate.Services;
 using MasterBlogger.Domain.ArticleCategoryAggregate;
 using MasterBlogger.Domain.ArticleCategoryAggregate.Services;
+using MasterBlogger.Domain.CommentAggregate;
 using MasterBlogger.Infrastructure.EFCore;
 using MasterBlogger.Infrastructure.EFCore.Repositories;
 using MasterBlogger.Infrastructure.Query;
@@ -25,6 +27,8 @@ namespace MasterBlogger.Infrastructure.Core
             services.AddTransient<IArticleRepository, ArticleRepository>();
             services.AddTransient<IArticleValidatorService, ArticleValidatorService>();
             services.AddTransient<IArticleQuery, ArticleQuery>();
+            services.AddTransient<ICommentApplication, CommentApplication>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
             services.AddDbContext<MasterBloggerContext>(options => options.UseSqlServer(connectionString));
         }
     }

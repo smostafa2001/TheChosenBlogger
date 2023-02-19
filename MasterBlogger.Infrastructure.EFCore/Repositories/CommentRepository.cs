@@ -1,4 +1,5 @@
 ﻿using MasterBlogger.Application.Contracts.Comment;
+using MasterBlogger.Domain.CommentAggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,10 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
             _context = context;
         }
 
-
+        public void CreateAndSave(Comment entity)
+        {
+            _context.Comments.Add(entity);
+            _context.SaveChanges();
+        }
     }
 }

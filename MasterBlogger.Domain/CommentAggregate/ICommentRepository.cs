@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterBlogger.Application.Contracts.Comment
+namespace MasterBlogger.Domain.CommentAggregate
 {
     public interface ICommentRepository
     {
-
+        void CreateAndSave(Comment entity);
     }
 }
