@@ -1,4 +1,5 @@
-﻿using MasterBlogger.Application;
+﻿using _01.Framework.Infrastructure;
+using MasterBlogger.Application;
 using MasterBlogger.Application.Contracts.Article;
 using MasterBlogger.Application.Contracts.ArticleCategory;
 using MasterBlogger.Application.Contracts.Comment;
@@ -28,6 +29,7 @@ namespace MasterBlogger.Infrastructure.Core
             services.AddTransient<IArticleQuery, ArticleQuery>();
             services.AddTransient<ICommentApplication, CommentApplication>();
             services.AddTransient<ICommentRepository, CommentRepository>();
+            services.AddTransient<IUnitOfWork, UnitOfWorkEf>();
             services.AddDbContext<MasterBloggerContext>(options => options.UseSqlServer(connectionString));
         }
     }

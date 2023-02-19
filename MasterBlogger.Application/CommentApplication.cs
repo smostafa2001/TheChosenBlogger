@@ -1,4 +1,5 @@
-﻿using MasterBlogger.Application.Contracts.Comment;
+﻿using _01.Framework.Infrastructure;
+using MasterBlogger.Application.Contracts.Comment;
 using MasterBlogger.Domain.CommentAggregate;
 using System.Collections.Generic;
 
@@ -7,10 +8,12 @@ namespace MasterBlogger.Application
     public class CommentApplication : ICommentApplication
     {
         private readonly ICommentRepository _commentRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CommentApplication(ICommentRepository commentRepository)
+        public CommentApplication(ICommentRepository commentRepository, IUnitOfWork unitOfWork)
         {
             _commentRepository = commentRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public void Add(AddComment command)
@@ -20,16 +23,18 @@ namespace MasterBlogger.Application
         }
         public void Confirm(long id)
         {
+            _unitOfWork.BeginTran();
             var comment = _commentRepository.Get(id);
             comment.Confirm();
-            //_commentRepository.Save();
+            _unitOfWork.CommitTran();
         }
 
         public void Cancel(long id)
         {
+            _unitOfWork.BeginTran();
             var comment = _commentRepository.Get(id);
             comment.Cancel();
-            //_commentRepository.Save();
+            _unitOfWork.CommitTran();
         }
 
 
