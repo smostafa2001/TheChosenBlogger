@@ -2,6 +2,8 @@
 using MasterBlogger.Application.Contracts.Comment;
 using MasterBlogger.Domain.CommentAggregate;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 
 namespace MasterBlogger.Application
 {
@@ -38,6 +40,15 @@ namespace MasterBlogger.Application
         }
 
 
-        public List<CommentViewModel> GetList() => _commentRepository.GetList();
+        public List<CommentViewModel> GetList() => _commentRepository.GetList().Select(x => new CommentViewModel
+        {
+            Id = x.Id,
+            Name = x.Name,
+            Email = x.Email,
+            Message = x.Message,
+            Status = x.Status,
+            CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture),
+            Article = x.Article.Title
+        }).ToList();
     }
 }

@@ -2,6 +2,8 @@
 using MasterBlogger.Application.Contracts.Article;
 using MasterBlogger.Domain.ArticleAggregate;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 
 namespace MasterBlogger.Application
 {
@@ -46,7 +48,14 @@ namespace MasterBlogger.Application
             };
         }
 
-        public List<ArticleViewModel> GetList() => _articleRepository.GetList();
+        public List<ArticleViewModel> GetList() => _articleRepository.GetList().Select(x => new ArticleViewModel
+        {
+            Id = x.Id,
+            Title = x.Title,
+            ArticleCategory = x.ArticleCategory.Title,
+            IsDeleted = x.IsDeleted,
+            CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture)
+        }).ToList();
 
         public void Remove(long id)
         {

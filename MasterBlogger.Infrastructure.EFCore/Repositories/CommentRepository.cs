@@ -1,5 +1,4 @@
 ﻿using _01.Framework.Infrastructure;
-using MasterBlogger.Application.Contracts.Comment;
 using MasterBlogger.Domain.CommentAggregate;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -14,16 +13,7 @@ namespace MasterBlogger.Infrastructure.EFCore.Repositories
         {
             _context = context;
         }
-        public List<CommentViewModel> GetList() => _context.Comments.Include(x => x.Article).Select(x => new CommentViewModel
-        {
-            Id = x.Id,
-            Name = x.Name,
-            Email = x.Email,
-            Message = x.Message,
-            Status = x.Status,
-            CreationDate = x.CreationDate.ToString(),
-            Article = x.Article.Title
-        }).ToList();
+        public List<Comment> GetList() => _context.Comments.Include(x => x.Article).ToList();
 
     }
 }
