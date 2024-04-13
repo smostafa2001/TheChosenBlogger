@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheChosenBlogger.Application.Implementations\TheChosenBlogger.Application.Implementations.csproj" />
+    <ProjectReference Include="..\TheChosenBlogger.Infrastructure.EFCore\TheChosenBlogger.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\TheChosenBlogger.Infrastructure.Query\TheChosenBlogger.Infrastructure.Query.csproj" />
+  </ItemGroup>
+
+</Project>

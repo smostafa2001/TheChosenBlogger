@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheChosenBlogger.Application.Contracts\TheChosenBlogger.Application.Contracts.csproj" />
+    <ProjectReference Include="..\TheChosenBlogger.Domain\TheChosenBlogger.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

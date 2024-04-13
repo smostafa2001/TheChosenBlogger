@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheChosenBlogger.Infrastructure.EFCore\TheChosenBlogger.Infrastructure.EFCore.csproj" />
+  </ItemGroup>
+
+</Project>
