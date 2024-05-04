@@ -30,9 +30,9 @@ Welcome to The Chosen Blogger, a simple blogging web app designed for practicing
    ```
 
 3. Change connection string:
-   modify /TheChosenBlogger.Presentation.RazorPages/appsettings.json and change the value of "ConnectionStrings"."TheChosenBloggerDb" to the connection string of your machine ([SQL Server Username/Password, Or Windows AuthN](https://www.connectionstrings.com/sql-server/)).
+   Modify /TheChosenBlogger.Presentation.RazorPages/appsettings.json and change the value of "ConnectionStrings"."TheChosenBloggerDb" to the connection string of your machine ([SQL Server Username/Password, Or Windows AuthN](https://www.connectionstrings.com/sql-server/)).
 
-4. Update EF Core database:
+5. Update EF Core database:
 
    ```bash
    dotnet ef database update
@@ -40,7 +40,7 @@ Welcome to The Chosen Blogger, a simple blogging web app designed for practicing
 
    This command will apply any pending migrations and update the database schema according to your model changes.
 
-5. Run the application:
+6. Run the application:
 
    ```bash
    dotnet run
