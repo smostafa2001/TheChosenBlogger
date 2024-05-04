@@ -13,7 +13,7 @@ Welcome to The Chosen Blogger, a simple blogging web app designed for practicing
 ### Prerequisites
 
 - [.NET SDK](https://dotnet.microsoft.com/download) installed on your machine
-- [Entity Framework Core tools](https://docs.microsoft.com/en-us/ef/core/cli/dotnet) for managing database migrations
+- [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) for database on your machine
 
 ### Getting Started
 
@@ -29,7 +29,10 @@ Welcome to The Chosen Blogger, a simple blogging web app designed for practicing
    cd TheChosenBlogger
    ```
 
-3. Update EF Core database:
+3. Change connection string:
+   modify appsettings.Development.json and change the value of "TheChosenStore" to the connection string of your machine ([SQL Server Username/Password, Or Windows AuthN](https://www.connectionstrings.com/sql-server/)).
+
+4. Update EF Core database:
 
    ```bash
    dotnet ef database update
@@ -37,7 +40,7 @@ Welcome to The Chosen Blogger, a simple blogging web app designed for practicing
 
    This command will apply any pending migrations and update the database schema according to your model changes.
 
-4. Run the application:
+5. Run the application:
 
    ```bash
    dotnet run
