@@ -30,6 +30,7 @@ Welcome to The Chosen Blogger, a simple blogging web app designed for practicing
    ```
 
 3. Change connection string:
+
    Modify /TheChosenBlogger.Presentation.RazorPages/appsettings.json and change the value of "ConnectionStrings"."TheChosenBloggerDb" to the connection string of your machine ([SQL Server Username/Password, Or Windows AuthN](https://www.connectionstrings.com/sql-server/)).
 
 5. Update EF Core database:
